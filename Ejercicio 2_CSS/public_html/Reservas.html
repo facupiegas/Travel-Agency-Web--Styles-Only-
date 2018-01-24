@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reservas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+     <div id="contenedor">
+        <header>
+            <a href="Bienvenida.html">
+                <img id="logo" alt="logo" src="img/logo.png">
+            </a>
+            <div id="login">
+                <form id="formLogin">
+                    <div>
+                      <label for="nomreUsuario" id="labelUser">Usuario</label>
+                      <input type="text" id="nomreUsuario" required>
+                    </div>
+                    <div>
+                      <label for="contraseña">Contraseña</label>
+                      <input type="password" id="contraseña" required>
+                    <button type="submit" id="btnIngresar">Ingresar</button>
+                    </div>
+                </form>  
+            </div>
+        </header>
+         <div style="clear: both"></div>
+        <nav id="navegacion">
+             <ul>
+                 <li><a href="Bienvenida.html">Inicio</a></li>
+                 <li><a href="Destinos.html">Destinos</a></li>
+                 <li><a href="Paquetes.html">Paquetes</a></li>
+                 <li><a href="Reservas.html" class="activo">Reservas</a></li>
+                 <li><a href="Contacto.html">Contacto</a></li>
+            </ul> 
+            </nav> 
+        <section>
+            <div id="divReservas">
+                <h1>Reservas</h1>
+                <form id="formulario" method="post" autocomplete="on">
+                    <em>Campos requeridos (*)</em>
+                            <h2> Datos Personales </h2>
+                            <label for="nombre">Nombre (*)</label>
+                            <input  type="text" id="nombre" name="nombre" title="Ingresa tu nombre" required>
+                            <label for="nombre">Segundo Nombre</label>
+                            <input  type="text" id="nombre2" name="nombre2" title="Ingresa tu segundo nombre">
+                            <label for="apellido1">Primer Apellido (*)</label>
+                            <input type="text" id="apellido1" name="apellido1" title="Ingresa tu primer apellido" required >
+                            <label for="apellido2">Segundo Apellido (*)</label>
+                            <input type="text" id="apellido2" name="apellido2" title="Ingresa tu segundo apellido" required>
+                            <label for="telefono">Teléfono (*)</label>
+                            <input type="number" id="telefono" name="telefono" title="Escribe tu teléfono" required>
+                            <label for="telefono_emergencia">Teléfono de Emergencia (*)</label>
+                            <input type="number" id="telefono_emergencia" name="telefono_emergencia" title="Escribe tu teléfono" required>
+                            <label for="mail" lang="en">Mail (*)</label>
+                            <input type="email" id="mail" name="mail" title="Escribe tu mail" placeholder="ejemplo@email.com" required>
+                    
+                            <h2>Viaje</h2>
+                            <h3>Seleccionar destino o paquete</h3>
+                            <select name="Destino o paquete" required id="selDestino">
+                            <option disabled selected value> -- seleccione una opcion -- </option>    
+                            <optgroup label="destinos">    
+                                <option>Canadá</option>
+                                <option>Colombia</option>
+                                <option>Finlandia</option>
+                                <option>Dominica</option>
+                                <option>Dominica</option>
+                            </optgroup>
+                            <optgroup label="paquetes">    
+                                <option>Angra Dos Reis</option>
+                                <option>Punta Cana</option>
+                                <option>Playa del Carmen</option>   
+                                <option>Barra da Tijuca</option>
+                                <option>Santiago de Chile con Paseos</option>
+                                <option>Suiza con nieve</option>
+                                <option>Villa la angostura</option>
+                                <option>Bariloche con amigos</option>
+                            </optgroup>
+                            </select>
+                            <br>
+                            <h3>Tipo Pasaje</h3>
+                            <input type="radio" name="pasaje" id="ida" value="ida" checked="checked">
+                            <label>Ida</label>
+                            <br>
+                            <input type="radio" name="pasaje" id="ida_vuelta" value="ida_vuelta">
+                            <label for="ida_vuelta">Ida y vuelta</label>
+                            <br>
+                            <h3>Comidas</h3>
+                            <input type="checkbox" value="desayuno" name="desayuno"> Desayuno<br>
+                            <input type="checkbox" value="almuerzo" name="almuerzo"> Almuerzo<br>
+                            <input type="checkbox" value="cena" name="cena">Cena<br>
+                        <h2>Seguro</h2>
+                        <p>Nuestras tarifas no incluyen seguros para los viajeros en caso de accidente. Ponemos a su disposición un seguro de asistencia en viaje cuyas coberturas contemplan gastos médicos (hospitalización, indemnización por robo/extravío de equipaje y responsabilidad civil) todo por 100 USD por persona.</p>
+                        <p><a href="#" target="_self" title="Ejemplo de Póliza de Seguro">Ejemplo de póliza</a></p>
+                        <p>No obstante, le recomendamos que se asesore y compare sus seguros personales con el que nosotros le ofrecemos.</p>
+                        <input type="checkbox" id="chkSeguro" value="seguro_viajeros"/>
+                        <label>Quiero contratar el seguro de asistencia en viaje 100 USD </label>
+                    <input type="submit" name="enviar" id="enviar" value="Enviar">
+                    <input type="reset" name="reset" id="reset" value="Borrar">   
+                </form>
+            </div>   
+        </section>
+        <div style="clear: both"></div> 
+        <footer id="footer">
+                <div id="footerLinks">
+                    <ul>
+                        <li><a href="#" target="_self" title="Empresa">Empresa</a></li>
+                        <li><a href="#" target="_self" title="Sucursales">Sucursales</a></li>
+                        <li><a href="#" target="_self" title="Corporativo">Corporativo</a></li>
+                        <li><a href="#" target="_self" title="Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div id="footerPago">
+                    <ul>
+                        <li><h4>Formas de Pago</h4></li>
+                        <li>Tarjetas de Crédito</li>
+                        <li>Depóosito Bancario</li>
+                        <li>Red Pagos</li>
+                        <li>Abitab</li>
+                    </ul>
+                </div>
+                <div id="footerOficinas">
+                    <h4>Oficinas</h4>
+                    <div>
+                        <p>
+                            MONTEVIDEO - CASA CENTRAL<br>
+                            Colonia 949<br>
+                            Teléfonos: + 598 2902 6868 / 2902 1844<br>
+                            <a href="mailto:ccentral@viajesya.com.uy">ccentral@viajesya.com.uy</a>
+                        </p>
+                        <p>
+                            PUNTA DEL ESTE<br>
+                            Blvd. Artigas Parada 6 esq. Pascual Gattas<br>
+                            Teléfono: +598 4248 4680 <br>
+                            <a href="mailto:punta@viajesya.com.uy">punta@viajesya.com.uy</a>
+                        </p>
+                    </div>
+                </div>             
+            </footer> 
+     </div>
+    </body>
+</html>

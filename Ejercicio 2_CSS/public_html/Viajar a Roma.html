@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Viajar a Roma</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+       <div id="contenedor">
+            <header>
+                <a href="Bienvenida.html">
+                    <img id="logo" alt="logo" src="img/logo.png">
+                </a>
+                <div id="login">
+                    <form id="formLogin">
+                        <div>
+                          <label for="nomreUsuario" id="labelUser">Usuario</label>
+                          <input type="text" id="nomreUsuario" required>
+                        </div>
+                        <div>
+                          <label for="contraseña">Contraseña</label>
+                          <input type="password" id="contraseña" required>
+                        <button type="submit" id="btnIngresar">Ingresar</button>
+                        </div>
+                    </form>  
+                </div>
+            </header>
+            <div style="clear: both"></div>
+            <nav id="navegacion">
+                 <ul>
+                     <li><a href="Bienvenida.html">Inicio</a></li>
+                     <li><a href="Destinos.html">Destinos</a></li>
+                     <li><a href="Paquetes.html">Paquetes</a></li>
+                     <li><a href="Reservas.html">Reservas</a></li>
+                     <li><a href="Contacto.html">Contacto</a></li>
+                </ul> 
+                </nav> 
+            <div id="divTabla">
+                <section>
+                    <h1 id="h1Roma">VUELOS de Montevideo a Roma</h1>
+                        <table>
+                        <tr>
+                            <th></th>
+                            <th>vie 12/5</th>
+                            <th>sáb 13/5</th>
+                            <th>dom 14/5</th>
+                            <th>lun 15/5</th>
+                            <th>mar 16/5</th>
+                            <th>mie 17/5</th>
+                            <th>jue 18/5</th>
+                        </tr>
+                        <tr>
+                            <th>jue 27/4</th>
+                            <td>USD 937</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                        </tr>
+                        <tr>
+                            <th>vie 28/4</th>
+                            <td colspan='4' id="tdAgotado">AGOTADO</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                        </tr>
+                        <tr>
+                            <th>sáb 29/4</th>
+                            <td>USD 937</td>
+                            <td>USD 817</td>
+                            <td>USD 817</td>
+                            <td>USD 937</td>
+                            <td>USD 1089</td>
+                            <td>USD 937</td>
+                            <td>USD 817</td>
+                        </tr>
+                        <tr>
+                            <th>dom 30/4</th>
+                            <td>USD 178</td>
+                            <td>USD 178</td>
+                            <td>USD 1089</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                        </tr>
+                        <tr>
+                            <th>lun 1/5</th>
+                            <td>USD 817</td>
+                            <td>USD 817</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                            <td rowspan='3' id="tdAgotado2">AGOTADO</td>
+                            <td>USD 1089</td>
+                        </tr>
+                        <tr>
+                            <th>mar 2/5</th>
+                            <td>USD 817</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                        </tr>
+                        <tr>
+                            <th>mié 3/5</th>
+                            <td>USD 817</td>
+                            <td>USD 817</td>
+                            <td>USD 817</td>
+                            <td>USD 1089</td>
+                            <td>USD 1089</td>
+                            <td>USD 817</td>
+                        </tr>
+                    </table>
+                    <article>
+                    <h2>DIFERENCIA HORARIA</h2>
+                        <P>
+                            El huso horario de Montevideo es Hora de Uruguay (UYT), la hora local es 21:00. El<br>
+                            huso horario de Roma es Hora de Europa Central (CET), la hora local es 1:00.<br>
+                            La diferencia horaria es de 4 horas.
+                        </P>
+                    </article>
+                    <div style="clear: both"></div>
+                    <article>
+                    <h2>TIPO DE CAMBIO</h2>
+                        <p>
+                            La moneda de Uruguay es el peso uruguayo. La moneda de Italia es el euro.<br>
+                            El tipo de cambio es de UYU 1.000,00 = EUR33,01 y EUR1,00 = UYU30,30.
+                        </p>
+                    </article>
+                </section>
+       </div>
+        <div style="clear: both"></div>
+        <footer id="footer">
+                <div id="footerLinks">
+                    <ul>
+                        <li><a href="#" target="_self" title="Empresa">Empresa</a></li>
+                        <li><a href="#" target="_self" title="Sucursales">Sucursales</a></li>
+                        <li><a href="#" target="_self" title="Corporativo">Corporativo</a></li>
+                        <li><a href="#" target="_self" title="Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div id="footerPago">
+                    <ul>
+                        <li><h4>Formas de Pago</h4></li>
+                        <li>Tarjetas de Crédito</li>
+                        <li>Depóosito Bancario</li>
+                        <li>Red Pagos</li>
+                        <li>Abitab</li>
+                    </ul>
+                </div>
+                <div id="footerOficinas">
+                    <h4>Oficinas</h4>
+                    <div>
+                        <p>
+                            MONTEVIDEO - CASA CENTRAL<br>
+                            Colonia 949<br>
+                            Teléfonos: + 598 2902 6868 / 2902 1844<br>
+                            <a href="mailto:ccentral@viajesya.com.uy">ccentral@viajesya.com.uy</a>
+                        </p>
+                        <p>
+                            PUNTA DEL ESTE<br>
+                            Blvd. Artigas Parada 6 esq. Pascual Gattas<br>
+                            Teléfono: +598 4248 4680 <br>
+                            <a href="mailto:punta@viajesya.com.uy">punta@viajesya.com.uy</a>
+                        </p>
+                    </div>
+                </div> 
+            <div style="clear: both"></div>
+            </footer> 
+       </div>
+    </body>
+</html>

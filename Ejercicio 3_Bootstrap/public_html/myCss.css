@@ -1,0 +1,301 @@
+body{
+    background-color: #C5D8D8;
+}
+.container{
+    background-color: white;
+}
+/*--------------------INICIO diagramacion HEADER----------------------*/
+#divLogin{
+    padding: 10px;
+}
+header .form-group {
+    margin-bottom: 5px;
+}
+.btn-default {
+   margin-top: 5px;
+}
+#labelUser{
+    margin-top: 5px;
+}
+/*--------------------FIN diagramacion HEADER----------------------*/
+
+/*--------------------INICIO diagramacion NAV----------------------*/
+nav{
+    background-color: #0f3a57;
+    width: 100%;
+}
+nav ul li a{
+    color: white;
+    text-align: center;
+    
+}
+nav ul li { 
+    cursor: pointer; 
+}
+/*--------------------FIN diagramacion NAV----------------------*/
+
+/*--------------------INICIO diagramacion footer----------------------*/
+footer{
+    background-color: #0f3a57;
+    margin-top: 10px;
+}
+#sectFooter{
+    margin-top: 10px;
+}
+li, h4{
+    color: white;
+    text-decoration: none;
+}
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+/*---------------------footerLinks--------------------------*/
+#footerLinks ul li{
+    font-size: 20px;
+    list-style-type: none;
+}
+#footerLinks ul li a:hover{
+    text-decoration: underline;
+}
+/*------------------------footerPago----------------------------*/
+#footerPago ul li{
+    list-style-type: none;
+}
+/*-------------------footerOficinas------------------------------*/
+#footerOficinas{
+    color: white;
+}
+ul, menu, dir {
+    -webkit-padding-start: 0px;
+}
+/*--------------------FIN diagramacion footer----------------------*/
+
+/*--------------------INICIO diagramacion SLDIER----------------------*/
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+#carouselOfertas{
+    margin-top: 10px;
+}
+.carousel-control.left, .carousel-control.right {
+   background-image:none;
+}
+#h1Ofertas{
+   color: #db4760; 
+}
+#carouselOfertas h2{
+   color: #337ab7; 
+}
+.carousel-indicators {
+    bottom: 150px;
+}
+/*--------------------FIN diagramacion SLDIER----------------------*/
+
+/*--------------------INICIO diagramacion OFERTAS----------------------*/
+#h1Ofertas{
+    color: #db4760; 
+}
+#sectOfertas h2{
+    color: #337ab7; 
+}
+/*--------------------FIN diagramacion OFERTAS----------------------*/
+
+/*--------------------INICIO diagramacion PAQUETES----------------------*/
+#sectPaquetes h1{
+    text-align: center;
+    color: #db4760;
+}
+#sectPaquetes h2{
+    font-size: 25px;
+    color: #0f3a57;
+    text-align: center;
+}
+#sectPaquetes article p{
+    margin-top: 10px;
+        
+}
+#pPrecio1, #pPrecio2, #pPrecio3, #pPrecio4, #pPrecio5, #pPrecio6, #pPrecio7, #pPrecio8{
+    margin-top: 0;
+    text-align: right;
+    font-size: 25px;
+    color: #db4760;
+    font-weight: 700;
+}
+
+#sectPaquetes img{
+    border-radius: 5px;
+}
+/*--------------------FIN diagramacion PAQUETES----------------------*/
+
+/*----------INICIO diagramacion cuerpo VIAJAR A ROMA------------*/
+#h1Roma{
+    color: #0f3a57; 
+    text-align: center;
+}
+#divTabla h2{
+    margin-bottom: 10px;
+    text-decoration: underline;
+    color: #db4760;
+    font-size: 20px;
+}
+#divTabla th, td {
+    padding: 15px;
+    text-align: center;
+}
+#divTabla h1{
+    margin-bottom: 10px;
+}
+table{
+    width: 100%;
+    margin-bottom: 10px;
+    border-spacing: 0;
+}
+td:hover {
+    background-color: #ccffcc
+}
+#tdAgotado, #tdAgotado2{
+    background-color: #ffcccc;  
+}
+#divTabla th{
+    background-color: #C5D8D8; 
+}
+/*---------------FIN diagramacion cuerpo VIAJAR A ROMA-----------------*/
+
+/*---------------INICIO diagramacion cuerpo CONTACTO-----------------*/
+#nombre, #apellido1, #mail  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#divContacto{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}    
+#comentarios{
+    width: 100%;
+    resize: none;
+}
+#enviar, #reset{
+    width: 100%;
+    background-color: #a4a4a4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}   
+#enviar{
+    margin-top: 15px;
+}
+#divContacto label{
+    margin-bottom: 5px;
+}
+#divContacto h1 {
+    margin-bottom: 10px;
+    color: #0f3a57;
+}
+#enviar:hover, #reset:hover {
+    background-color: #ccc;
+}
+/*---------------FIN diagramacion cuerpo CONTACTO-----------------*/
+
+/*---------------INICIO diagramacion cuerpo RESERVAS -----------------*/
+#divReservas{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#nombreRes, #nombre2Res,#apellido1Res , #apellido2Res, #telefono, #telefono_emergencia, #mailRes{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#enviarRes, #resetRes{
+    width: 100%;
+    background-color: #a4a4a4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+#telefono, #telefono_emergencia{/*Para remover flechitas del campo telefono*/
+    -moz-appearance: textfield;
+}
+#selDestino {
+    width: 30%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+#divReservas h3{
+    margin: 10px 0px;
+    color: #0f3a57; 
+}
+#divReservas h2{
+    margin: 10px 0px;
+    color: #0f3a57;
+}
+#divReservas h1{
+    color: #0f3a57;
+}
+#divReservas #formulario #pasaje{
+    padding: 5px;
+    margin-bottom: 15px;
+}
+#divReservas p{
+    margin-bottom: 10px;
+}
+/*---------------FIN diagramacion cuerpo RESERVAS-----------------*/
+
+/*---------------INICIO diagramacion cuerpo DESTINOS-----------------*/
+#sectDestinos h1{
+    text-align: center;
+    margin: 10px auto;
+}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#sectDestinos article{
+    padding: 10px;
+}
+#sectDestinos img{
+    border-radius: 5px;
+}
+/*---------------FIN diagramacion cuerpo DESTINOS-----------------*/
+
+/*---------------SIMULACRO OBLIGATORIO-----------------*/
+#artTablaPos table th, #artTablaPos table td {
+    text-align: center;
+    background-color: #C5D8D8;
+    padding: 15px;
+    border: 1px solid white;   
+}
+#logoOlimp, #logoOlimp2, #logoOlimp3{
+    border: 3px double #33ffff;
+    margin-top: 10px;
+}

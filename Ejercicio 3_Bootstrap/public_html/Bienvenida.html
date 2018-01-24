@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="myCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <header>
+                    <section class="row">
+                        <article class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-7 col-md-5 col-lg-4">
+                            <a href="Bienvenida.html">
+                                <img id="logo" alt="logo" src="img/logo.png" class="img-responsive">
+                            </a>
+                        </article>
+                        <article  class="col-xs-12 col-sm-offset-1 col-sm-4 col-md-offset-4 col-md-3 col-lg-offset-5 col-lg-3">
+                            <form>
+                                <div class="form-group">
+                                  <label for="nomreUsuario" id="labelUser">Usuario</label>
+                                  <input type="text" class="form-control" id="nomreUsuario" placeholder="Usuario" required>
+                                </div>
+                                <div class="form-group">
+                                  <label for="contraseña">Contraeña</label>
+                                  <input type="password" class="form-control" id="contraseña" placeholder="Contraeña" required>
+                                <button type="submit" id="btnIngresar" class="btn btn-default">Ingresar</button>
+                                </div>
+                            </form>
+                        </article>
+                    </section>
+                </header>
+            </div>
+              <div class="row">
+                <nav id="navegacion" class="col-sm-12">
+                 <ul class="nav nav-pills nav-justified">
+                    <li class="col-xs-12 col-sm-offset-1 col-sm-2 active"><a href="Bienvenida.html">Inicio</a></li>
+                    <li class="col-xs-12 col-sm-2"><a href="Destinos.html">Destinos</a></li>
+                    <li class="col-xs-12 col-sm-2"><a href="Paquetes.html">Paquetes</a></li>
+                    <li class="col-xs-12 col-sm-2"><a data-toggle="modal" data-target="#myModal2">Reservas</a></li>
+                    <li class="col-xs-12 col-sm-2"><a data-toggle="modal" data-target="#myModal">Contacto</a></li>
+                   </ul> 
+                </nav>
+            </div>
+            <!---------------------------------------Comienzo ventana MODAL CONTACTO------------------------------------------------------->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <!--Contenido de la ventana MODAL-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <h1 >Contáctanos</h1>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" title="Escribe tu nombre" placeholder="Tu primer nombre" required>
+                                <label for="apellido1">Apellido</label>
+                                <input type="text" id="apellido1" name="apellido1" title="Escribe tu primer apellido" placeholder="Primer apellido" required >
+                                <label for="mail" lang="en">Mail</label>
+                                <input type="email" id="mail" name="mail" title="Escribe tu mail" placeholder="tu@email.com" required>
+                                <textarea name="comentarios" id="comentarios" cols="100" rows="10" title="Escribe tus comentarios"></textarea>  
+                                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                                <input type="reset" name="reset" id="reset" value="Borrar">
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <!---------------------------------------Fin ventana MODAL CONTACTO------------------------------------------------------------>
+            <!---------------------------------------Comienzo ventana MODAL RESERVAS------------------------------------------------------->
+                <div class="modal fade " id="myModal2" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <!--Contenido de la ventana MODAL-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formulario" method="post" autocomplete="on">
+                                <em>Campos requeridos (*)</em>
+                                        <h2> Datos Personales </h2>
+                                        <label for="nombre">Nombre (*)</label>
+                                        <input  type="text" id="nombreRes" name="nombre" title="Ingresa tu nombre" required>
+                                        <label for="nombre">Segundo Nombre</label>
+                                        <input  type="text" id="nombre2Res" name="nombre2" title="Ingresa tu segundo nombre">
+                                        <label for="apellido1">Primer Apellido (*)</label>
+                                        <input type="text" id="apellido1Res" name="apellido1" title="Ingresa tu primer apellido" required >
+                                        <label>Segundo Apellido (*)</label>
+                                        <input type="text" id="apellido2Res" name="apellido2" title="Ingresa tu segundo apellido" required>
+                                        <label for="telefono">Teléfono (*)</label>
+                                        <input type="number" id="telefono" name="telefono" title="Escribe tu teléfono" required>
+                                        <label for="telefono_emergencia">Teléfono de Emergencia (*)</label>
+                                        <input type="number" id="telefono_emergencia" name="telefono_emergencia" title="Escribe tu teléfono" required>
+                                        <label for="mail" lang="en">Mail (*)</label>
+                                        <input type="email" id="mailRes" name="mail" title="Escribe tu mail" placeholder="ejemplo@email.com" required>
+
+                                        <h2>Viaje</h2>
+                                        <h3>Seleccionar destino o paquete</h3>
+                                        <select name="Destino o paquete" required id="selDestino">
+                                        <option disabled selected value> -- seleccione una opcion -- </option>    
+                                        <optgroup label="destinos">    
+                                            <option>Canadá</option>
+                                            <option>Colombia</option>
+                                            <option>Finlandia</option>
+                                            <option>Dominica</option>
+                                            <option>Dominica</option>
+                                        </optgroup>
+                                        <optgroup label="paquetes">    
+                                            <option>Angra Dos Reis</option>
+                                            <option>Punta Cana</option>
+                                            <option>Playa del Carmen</option>   
+                                            <option>Barra da Tijuca</option>
+                                            <option>Santiago de Chile con Paseos</option>
+                                            <option>Suiza con nieve</option>
+                                            <option>Villa la angostura</option>
+                                            <option>Bariloche con amigos</option>
+                                        </optgroup>
+                                        </select>
+                                        <br>
+                                        <h3>Tipo Pasaje</h3>
+                                        <input type="radio" name="pasaje" id="ida" value="ida" checked="checked">
+                                        <label>Ida</label>
+                                        <br>
+                                        <input type="radio" name="pasaje" id="ida_vuelta" value="ida_vuelta">
+                                        <label for="ida_vuelta">Ida y vuelta</label>
+                                        <br>
+                                        <h3>Comidas</h3>
+                                        <input type="checkbox" value="desayuno" name="desayuno"> Desayuno<br>
+                                        <input type="checkbox" value="almuerzo" name="almuerzo"> Almuerzo<br>
+                                        <input type="checkbox" value="cena" name="cena">Cena<br>
+                                    <h2>Seguro</h2>
+                                    <p>Nuestras tarifas no incluyen seguros para los viajeros en caso de accidente. Ponemos a su disposición un seguro de asistencia en viaje cuyas coberturas contemplan gastos médicos (hospitalización, indemnización por robo/extravío de equipaje y responsabilidad civil) todo por 100 USD por persona.</p>
+                                    <p><a href="#" target="_self" title="Ejemplo de Póliza de Seguro">Ejemplo de póliza</a></p>
+                                    <p>No obstante, le recomendamos que se asesore y compare sus seguros personales con el que nosotros le ofrecemos.</p>
+                                    <input type="checkbox" id="chkSeguro" value="seguro_viajeros"/>
+                                    <label>Quiero contratar el seguro de asistencia en viaje 100 USD </label>
+                                <input type="submit" name="enviar" id="enviarRes" value="Enviar">
+                                <input type="reset" name="reset" id="resetRes" value="Borrar">   
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <!---------------------------------------Fin ventana MODAL RESERVAS------------------------------------------------------------>
+            <section class="col-lg-12">
+                 <h1 id="h1Ofertas">Ofertas</h1>
+                <div class="row">
+                <div class="col-xs-12 hidden-xs">
+                    <div id="carouselOfertas" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselOfertas" data-slide-to="0" class="active "></li>
+                            <li data-target="#carouselOfertas" data-slide-to="1"></li>
+                            <li data-target="#carouselOfertas" data-slide-to="2"></li>
+                            <li data-target="#carouselOfertas" data-slide-to="3"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <a href="Viajar%20a%20Roma.html">
+                                <img src="img/Roma.jpg" alt="Roma" title="Roma"/>
+                                </a>
+                                <h2>Viajá a Roma</h2>
+                                <p>
+                                    Roma, Europa.<br>
+                                    Viajá a Roma con los vuelos y hoteles más baratos. Disfrutá de la bella Italia con el mejor precio aquí en TocTocViajes.<br>
+                                    $799
+                                </p>
+                            </div>
+                            <div class="item">
+                                <img src="img/barcelona1.jpg" alt="Barcelona" title="Barcelona"/> 
+                                <h2>De fiesta por Barcelona</h2>
+                                <p>
+                                    Barcelona, Europa.<br>
+                                    No te pierdas esta oportunidad para divertirte con el fútbol y los goles de Suárez. Aprovecha al máximo la fiesta Europea.<br>
+                                    $989
+                                </p>
+                            </div>
+                            <div class="item">
+                                <img src="img/rio-de-janeiro-1413012106-L.jpg" alt="Rio de Janeiro" title="Rio de Janeiro"/>
+                                <h2>Divertite en Río</h2>
+                                <p>
+                                    Río de Janeiro, Brasil.<br>
+                                    Viajá en vuelo directo a Río de Janeiro con el precio más barato. Encontrá hoteles en oferta y disfrutá de las mejores playas de Brasil.<br>
+                                    $389
+                                </p>
+                            </div>
+                            <div class="item">
+                                <img src="img/rumbo-caribe.jpg" alt="Caribe" title="Caribe"/> 
+                                <h2>Relax en el Caribe</h2>
+                                <p>
+                                    Punta Cana, Caribe.<br>
+                                    Encontrá los vuelos y hoteles all inclusive más baratos de Punta Cana.Descansá en las playas del Caribe y divertite con nuestras actividades.<br>
+                                    $699
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carouselOfertas" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carouselOfertas" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section class="row" id="sectOfertas">
+                <article id="artRoma" class="visible-xs col-xs-12">
+                        <h2>Viajá a Roma</h2>
+                        <figure>
+                            <a href="Viajar%20a%20Roma.html">
+                                <img src="img/Roma.jpg" alt="Roma" title="Roma"/>
+                            </a>
+                        <figcaption><em>Coliseo Romano.</em></figcaption>
+                        </figure>
+                        <p>
+                            Roma, Europa.<br>
+                            Viajá a Roma con los vuelos y hoteles más baratos. Disfrutá de la bella Italia con el mejor precio aquí en TocTocViajes.<br>
+                            $799
+                        </p>
+                </article>
+                <article id="artBarcelona" class="visible-xs col-xs-12">
+                        <h2 id="h2Barcelona">De fiesta por Barcelona</h2>
+                            <figure>
+                            <img src="img/barcelona1.jpg" alt="Barcelona" title="Barcelona" height="400"/> 
+                            <figcaption><em>Sagrada Familia, Barcelona.</em></figcaption>
+                            </figure>
+                            <p>
+                                Barcelona, Europa.<br>
+                                No te pierdas esta oportunidad para divertirte con el fútbol y los goles de Suárez. Aprovecha al máximo la fiesta Europea.<br>
+                                $989
+                            </p>
+                </article>
+                <article class="visible-xs col-xs-12">
+                        <h2>Divertite en Río</h2>
+                             <figure>
+                            <img src="img/rio-de-janeiro-1413012106-L.jpg" alt="Rio de Janeiro" title="Rio de Janeiro" height="400"/> 
+                            <figcaption><em>Cristo Redentor, Rio de Janeiro.</em></figcaption>
+                            </figure>
+                            <p>
+                                Río de Janeiro, Brasil.<br>
+                                Viajá en vuelo directo a Río de Janeiro con el precio más barato. Encontrá hoteles en oferta y disfrutá de las mejores playas de Brasil.<br>
+                                $389
+                            </p>
+                </article>
+                <article id="artCaribe" class="visible-xs col-xs-12">
+                        <h2 id="h2Caribe">Relax en el Caribe</h2>
+                            <figure>
+                            <img src="img/rumbo-caribe.jpg" alt="Caribe" title="Caribe" height="400"/> 
+                            <figcaption><em>Caribe.</em></figcaption>
+                            </figure>
+                            <p>
+                                Punta Cana, Caribe.<br>
+                                Encontrá los vuelos y hoteles all inclusive más baratos de Punta Cana.Descansá en las playas del Caribe y divertite con nuestras actividades.<br>
+                                $699
+                            </p>
+                </article>
+            </section>
+            <section class="row visible-lg">
+                <article class="col-lg-6">
+                    <h1>Michael Phelps, histórico en Rio</h1>
+                    <p>
+                       Phelps logró este martes dos nuevas medallas de oro, con lo que son tres las que ha logrado en las Olimpiadas de Río. 
+                    </p>
+                    <p>
+                       Tras vencer en la prueba de 200 metros mariposa, se impuso junto a sus compañeros del equipo de EE.UU. en el relevo 4x200 estilo libre. El domingo se había ganado el 4x100. 
+                    </p>
+                    <p>
+                       En total, el "tiburón de Baltimore" tiene ya 25 medallas olímpicas. A sus 22 oros suma tres platas y dos bronces. Es el primer nadador de la historia en lograr un oro en cuatro Juegos Olímpicos distintos. Y todavía no ha terminado su participación en Brasil.
+                    </p>
+                </article>
+                <article class="col-lg-6">
+                           <img src="Materiales/1.jpg" alt="phelpsAgua" class="img-responsive"/>
+                </article>
+                <article class="col-lg-6" id="artTablaPos">
+                    <table>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>País</th>
+                            <th><img src="Materiales/oro.png" alt="oro" class="img-responsive"/></th>
+                            <th><img src="Materiales/plata.png" alt="plata" class="img-responsive"/></th>
+                            <th><img src="Materiales/bronce.png" alt="bronce" class="img-responsive"/></th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Uruguay</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Reino Unido</td>
+                            <td>18</td>
+                            <td>35</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>China</td>
+                            <td>14</td>
+                            <td>24</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Japon</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>Australia</td>
+                            <td>8</td>
+                            <td>8</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>Inglaterra</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>Irlanda</td>
+                            <td>2</td>
+                            <td>9</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <td>Dinamarca</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </article>
+                <article class="col-lg-6">
+                    <figure>
+                    <img src="Materiales/2.png" alt="logo" id="logoOlimp" class="img-responsive"/>
+                    <figcaption class="text-center">Logo Oficial Rio 2016</figcaption>
+                    </figure>
+                </article>
+            </section>
+             <section class="row visible-md">
+                 <article class="col-md-6">
+                           <img src="Materiales/1.jpg" alt="phelpsAgua" class="img-responsive"/>
+                </article>
+                <article class="col-md-6">
+                    <h1>Michael Phelps, histórico en Rio</h1>
+                    <p>
+                       Phelps logró este martes dos nuevas medallas de oro, con lo que son tres las que ha logrado en las Olimpiadas de Río. 
+                    </p>
+                    <p>
+                       Tras vencer en la prueba de 200 metros mariposa, se impuso junto a sus compañeros del equipo de EE.UU. en el relevo 4x200 estilo libre. El domingo se había ganado el 4x100. 
+                    </p>
+                    <p>
+                       En total, el "tiburón de Baltimore" tiene ya 25 medallas olímpicas. A sus 22 oros suma tres platas y dos bronces. Es el primer nadador de la historia en lograr un oro en cuatro Juegos Olímpicos distintos. Y todavía no ha terminado su participación en Brasil.
+                    </p>
+                </article>
+                <article class="col-md-6" id="artTablaPos">
+                    <table>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>País</th>
+                            <th><img src="Materiales/oro.png" alt="oro" class="img-responsive"/></th>
+                            <th><img src="Materiales/plata.png" alt="plata" class="img-responsive"/></th>
+                            <th><img src="Materiales/bronce.png" alt="bronce" class="img-responsive"/></th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Uruguay</td>
+                            <td>23</td>
+                            <td>12</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Reino Unido</td>
+                            <td>18</td>
+                            <td>35</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>China</td>
+                            <td>14</td>
+                            <td>24</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Japon</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>Australia</td>
+                            <td>8</td>
+                            <td>8</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>Inglaterra</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>7</th>
+                            <td>Irlanda</td>
+                            <td>2</td>
+                            <td>9</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th>8</th>
+                            <td>Dinamarca</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </article>
+                <article class="col-md-6">
+                    <figure>
+                    <img src="Materiales/2.png" alt="logo" id="logoOlimp2" class="img-responsive"/>
+                    <figcaption class="text-center">Logo Oficial Rio 2016</figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section class="row hidden-lg hidden-md">
+                <article class="col-sm-12">
+                    <h1>Shaunae Miller se lanza de cabeza a por el oro</h1>
+                        <p>
+                            La carrera fue de antología. Miller venía primero des los últimos 200 metros, pero parecía que en los últimos metros perdía en manos de la estadounidense Allyson Felix, quien quería convertirse en la primera atleta de la historia con cinco medallas de oro olímpicas.
+                        </p>
+                </article>
+                <article class="col-xs-12">
+                    <img src="Materiales/3.jpg" alt="miller" class="img-responsive"/>
+                </article>
+                <article class="col-sm-12 visible-sm">
+                    <h1>Próximos Eventos</h1>
+                    <ul>
+                        <li>Pr+oximas Ediciones</li>
+                        <li>Rio 2016</li>
+                        <li>Rusia 2020</li>
+                    </ul>
+                </article>
+                <article class="col-xs-12">
+                    <figure>
+                    <img src="Materiales/2.png" alt="logo" id="logoOlimp3" class="img-responsive"/>
+                    <figcaption class="text-center">Logo Oficial Rio 2016</figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section>
+                    <h1>Beneficios</h1>
+                        <p>Conocé los beneficios exclusivos de comprar en TocTocViajes.com</p>             
+                        <p>- Te garantizamos el mejor precio, ¡siempre!Compará entre todas las aerolíneas y más de 200.000 hoteles en todo el mundo para acceder a los precios más convenientes.</p>
+                        <p>- Pagar es más fácil y seguro.Podés hacerlo con tarjeta de crédito, transferencia bancaria o en redes de cobranza.</p>
+                        <p>- Financiá tu vuelo u hotel en hasta 6 cuotas, sin recargo.Y olvidate de los cobros adicionales en tu tarjeta por compras internacionales.</p>
+                        <p>- ¡Resolvé todo en un mismo lugar!El pasaje al destino que soñaste, el hotel ideal y el seguro de viaje que te merecés.</p>
+                        <p>- Y no lo olvides, ¡estamos para ayudarte! Más de 30 profesionales ubicados en Uruguay para darte asistencia vía chat o teléfono, para que compres y viajes más tranquilo.</p>
+            </section>
+            <footer id="footer" class="row">
+                <section id="sectFooter">
+                    <article id="footerLinks" class="col-xs-12 col-sm-4 col-lg-offset-1 col-lg-3">
+                    <ul>
+                        <li><a href="#" target="_self" title="Empresa">Empresa</a></li>
+                        <li><a href="#" target="_self" title="Sucursales">Sucursales</a></li>
+                        <li><a href="#" target="_self" title="Corporativo">Corporativo</a></li>
+                        <li><a href="#" target="_self" title="Contacto">Contacto</a></li>
+                    </ul>
+                    </article>
+                    <article id="footerPago" class="col-xs-12 col-sm-4">
+                    <ul>
+                        <li><h4>Formas de Pago</h4></li>
+                        <li>Tarjetas de Crédito</li>
+                        <li>Depóosito Bancario</li>
+                        <li>Red Pagos</li>
+                        <li>Abitab</li>
+                    </ul>
+                    </article>
+                    <article id="footerOficinas" class="col-xs-12 col-sm-4">
+                    <h4>Oficinas</h4>
+                        <p>
+                            MONTEVIDEO - CASA CENTRAL<br>
+                            Colonia 949<br>
+                            Teléfonos: + 598 2902 6868 / 2902 1844<br>
+                            <a href="mailto:ccentral@viajesya.com.uy">ccentral@viajesya.com.uy</a>
+                        </p>
+                        <p>
+                            PUNTA DEL ESTE<br>
+                            Blvd. Artigas Parada 6 esq. Pascual Gattas<br>
+                            Teléfono: +598 4248 4680 <br>
+                            <a href="mailto:punta@viajesya.com.uy">punta@viajesya.com.uy</a>
+                        </p>
+                    </article>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

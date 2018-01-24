@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Destinos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="myCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <header>
+                    <section class="row">
+                        <article class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-7 col-md-5 col-lg-4">
+                            <a href="Bienvenida.html">
+                                <img id="logo" alt="logo" src="img/logo.png" class="img-responsive">
+                            </a>
+                        </article>
+                        <article  class="col-xs-12 col-sm-offset-1 col-sm-4 col-md-offset-4 col-md-3 col-lg-offset-5 col-lg-3">
+                            <form>
+                                <div class="form-group">
+                                  <label for="nomreUsuario" id="labelUser">Usuario</label>
+                                  <input type="text" class="form-control" id="nomreUsuario" placeholder="Usuario" required>
+                                </div>
+                                <div class="form-group">
+                                  <label for="contraseña">Contraeña</label>
+                                  <input type="password" class="form-control" id="contraseña" placeholder="Contraeña" required>
+                                <button type="submit" id="btnIngresar" class="btn btn-default">Ingresar</button>
+                                </div>
+                            </form>
+                        </article>
+                    </section>
+                </header>
+            </div>
+              <div class="row">
+                <nav id="navegacion" class="col-sm-12">
+                 <ul class="nav nav-pills nav-justified">
+                    <li class="col-xs-12 col-sm-offset-1 col-sm-2"><a href="Bienvenida.html">Inicio</a></li>
+                    <li class="col-xs-12 col-sm-2 active"><a href="Destinos.html">Destinos</a></li>
+                    <li class="col-xs-12 col-sm-2"><a href="Paquetes.html">Paquetes</a></li>
+                    <li class="col-xs-12 col-sm-2"><a data-toggle="modal" data-target="#myModal2">Reservas</a></li>
+                    <li class="col-xs-12 col-sm-2"><a data-toggle="modal" data-target="#myModal">Contacto</a></li>
+                   </ul> 
+                </nav>
+                </div>
+            <!---------------------------------------Comienzo ventana MODAL CONTACTO------------------------------------------------------->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <!--Contenido de la ventana MODAL-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <h1 >Contáctanos</h1>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" title="Escribe tu nombre" placeholder="Tu primer nombre" required>
+                                <label for="apellido1">Apellido</label>
+                                <input type="text" id="apellido1" name="apellido1" title="Escribe tu primer apellido" placeholder="Primer apellido" required >
+                                <label for="mail" lang="en">Mail</label>
+                                <input type="email" id="mail" name="mail" title="Escribe tu mail" placeholder="tu@email.com" required>
+                                <textarea name="comentarios" id="comentarios" cols="100" rows="10" title="Escribe tus comentarios"></textarea>  
+                                <input type="submit" name="enviar" id="enviar" value="Enviar">
+                                <input type="reset" name="reset" id="reset" value="Borrar">
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <!---------------------------------------Fin ventana MODAL CONTACTO------------------------------------------------------------>
+            <!---------------------------------------Comienzo ventana MODAL RESERVAS------------------------------------------------------->
+                <div class="modal fade " id="myModal2" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <!--Contenido de la ventana MODAL-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formulario" method="post" autocomplete="on">
+                                <em>Campos requeridos (*)</em>
+                                        <h2> Datos Personales </h2>
+                                        <label for="nombre">Nombre (*)</label>
+                                        <input  type="text" id="nombreRes" name="nombre" title="Ingresa tu nombre" required>
+                                        <label for="nombre">Segundo Nombre</label>
+                                        <input  type="text" id="nombre2Res" name="nombre2" title="Ingresa tu segundo nombre">
+                                        <label for="apellido1">Primer Apellido (*)</label>
+                                        <input type="text" id="apellido1Res" name="apellido1" title="Ingresa tu primer apellido" required >
+                                        <label>Segundo Apellido (*)</label>
+                                        <input type="text" id="apellido2Res" name="apellido2" title="Ingresa tu segundo apellido" required>
+                                        <label for="telefono">Teléfono (*)</label>
+                                        <input type="number" id="telefono" name="telefono" title="Escribe tu teléfono" required>
+                                        <label for="telefono_emergencia">Teléfono de Emergencia (*)</label>
+                                        <input type="number" id="telefono_emergencia" name="telefono_emergencia" title="Escribe tu teléfono" required>
+                                        <label for="mail" lang="en">Mail (*)</label>
+                                        <input type="email" id="mailRes" name="mail" title="Escribe tu mail" placeholder="ejemplo@email.com" required>
+
+                                        <h2>Viaje</h2>
+                                        <h3>Seleccionar destino o paquete</h3>
+                                        <select name="Destino o paquete" required id="selDestino">
+                                        <option disabled selected value> -- seleccione una opcion -- </option>    
+                                        <optgroup label="destinos">    
+                                            <option>Canadá</option>
+                                            <option>Colombia</option>
+                                            <option>Finlandia</option>
+                                            <option>Dominica</option>
+                                            <option>Dominica</option>
+                                        </optgroup>
+                                        <optgroup label="paquetes">    
+                                            <option>Angra Dos Reis</option>
+                                            <option>Punta Cana</option>
+                                            <option>Playa del Carmen</option>   
+                                            <option>Barra da Tijuca</option>
+                                            <option>Santiago de Chile con Paseos</option>
+                                            <option>Suiza con nieve</option>
+                                            <option>Villa la angostura</option>
+                                            <option>Bariloche con amigos</option>
+                                        </optgroup>
+                                        </select>
+                                        <br>
+                                        <h3>Tipo Pasaje</h3>
+                                        <input type="radio" name="pasaje" id="ida" value="ida" checked="checked">
+                                        <label>Ida</label>
+                                        <br>
+                                        <input type="radio" name="pasaje" id="ida_vuelta" value="ida_vuelta">
+                                        <label for="ida_vuelta">Ida y vuelta</label>
+                                        <br>
+                                        <h3>Comidas</h3>
+                                        <input type="checkbox" value="desayuno" name="desayuno"> Desayuno<br>
+                                        <input type="checkbox" value="almuerzo" name="almuerzo"> Almuerzo<br>
+                                        <input type="checkbox" value="cena" name="cena">Cena<br>
+                                    <h2>Seguro</h2>
+                                    <p>Nuestras tarifas no incluyen seguros para los viajeros en caso de accidente. Ponemos a su disposición un seguro de asistencia en viaje cuyas coberturas contemplan gastos médicos (hospitalización, indemnización por robo/extravío de equipaje y responsabilidad civil) todo por 100 USD por persona.</p>
+                                    <p><a href="#" target="_self" title="Ejemplo de Póliza de Seguro">Ejemplo de póliza</a></p>
+                                    <p>No obstante, le recomendamos que se asesore y compare sus seguros personales con el que nosotros le ofrecemos.</p>
+                                    <input type="checkbox" id="chkSeguro" value="seguro_viajeros"/>
+                                    <label>Quiero contratar el seguro de asistencia en viaje 100 USD </label>
+                                <input type="submit" name="enviar" id="enviarRes" value="Enviar">
+                                <input type="reset" name="reset" id="resetRes" value="Borrar">   
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            <!---------------------------------------Fin ventana MODAL RESERVAS------------------------------------------------------------>
+            <section id="sectDestinos">
+            <h1>Los 5 mejores paises para viajar en 2017</h1>
+                <article class="col-lg-12">
+                    <div class="embed-container">
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/HfTkZmKK1b0?ecver=1" allowfullscreen></iframe>
+                    </div>
+                        <div>
+                    <h2>Canadá</h2>
+                        <p>
+                            Su excelente calidad de vida, el dinamismo de sus ciudades y la fama de ser un país<br>
+                            acogedor y cortés sitúan a Canadá -que el próximo año celebrará su 150 aniversario-<br> 
+                            en el top ten de mejores países para viajar en 2017.
+                        </p>
+                    </div>
+                </article>
+                <div style="clear: both"></div>
+                <article>
+                    <div class="embed-container">
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/sQG9chiCHaw?ecver=1" allowfullscreen></iframe>
+                    </div>
+                    <h2>Colombia</h2>
+                        <p>
+                            En la actualidad, Colombia -que el año que viene espera con ilusión la visita del papa<br>  
+                            Francisco- es una amalgama de cultura, hospitalidad, naturaleza y belleza que<br>  
+                            sorprende al viajero.
+                        </p>
+                </article>
+                <div style="clear: both"></div>
+                <article>
+                    <div class="embed-container">
+                       <iframe width="854" height="480" src="https://www.youtube.com/embed/_shamKZhbqo?ecver=1" allowfullscreen></iframe>
+                    </div>
+                    <h2>Finlandia</h2>
+                        <p>
+                            Se prepara para celebrar el año que viene el primer centenario de su independencia<br>
+                            con mil y una actividades de índole muy diversa en todos los rincones de su territorio.
+                        </p>
+                </article>
+                <div style="clear: both"></div>
+                <article>
+                    <div class="embed-container">
+                       <iframe width="854" height="480" src="https://www.youtube.com/embed/C-r1BaWqb9k?ecver=1" allowfullscreen></iframe>
+                    </div>
+                    <h2>Dominica</h2>
+                        <p>
+                           Naturaleza desbordante, una fauna única, playas desérticas y
+                           escasa presencia turística caracterizan este país que algunos
+                           confunden con República Dominicana. Situada en
+                           las Antillas menores, en el mar Caribe, Dominica carece todavía de grandes resorts,
+                           infraestructura que verá la luz en 2018.   
+                        </p>
+                </article>
+                <div style="clear: both"></div>
+                <article>
+                    <div class="embed-container">
+                       <iframe width="854" height="480" src="https://www.youtube.com/embed/bYGbYhe-ji0?ecver=1" allowfullscreen></iframe>
+                    </div>
+                    <h2>Nepal</h2>
+                        <p>
+                         A pesar de los desastres naturales que arrasaron parte de su territorio, Nepal continúa<br> 
+                         ofreciendo mil y un atractivos a los visitantes, sobre todo, increíbles e históricos<br> 
+                         templos y rutas de senderismo. 
+                        </p>
+                </article>
+            </section>
+            <footer id="footer" class="row">
+                <section id="sectFooter">
+                    <article id="footerLinks" class="col-xs-12 col-sm-4 col-lg-offset-1 col-lg-3">
+                    <ul>
+                        <li><a href="#" target="_self" title="Empresa">Empresa</a></li>
+                        <li><a href="#" target="_self" title="Sucursales">Sucursales</a></li>
+                        <li><a href="#" target="_self" title="Corporativo">Corporativo</a></li>
+                        <li><a href="#" target="_self" title="Contacto">Contacto</a></li>
+                    </ul>
+                    </article>
+                    <article id="footerPago" class="col-xs-12 col-sm-4">
+                    <ul>
+                        <li><h4>Formas de Pago</h4></li>
+                        <li>Tarjetas de Crédito</li>
+                        <li>Depóosito Bancario</li>
+                        <li>Red Pagos</li>
+                        <li>Abitab</li>
+                    </ul>
+                    </article>
+                    <article id="footerOficinas" class="col-xs-12 col-sm-4">
+                    <h4>Oficinas</h4>
+                        <p>
+                            MONTEVIDEO - CASA CENTRAL<br>
+                            Colonia 949<br>
+                            Teléfonos: + 598 2902 6868 / 2902 1844<br>
+                            <a href="mailto:ccentral@viajesya.com.uy">ccentral@viajesya.com.uy</a>
+                        </p>
+                        <p>
+                            PUNTA DEL ESTE<br>
+                            Blvd. Artigas Parada 6 esq. Pascual Gattas<br>
+                            Teléfono: +598 4248 4680 <br>
+                            <a href="mailto:punta@viajesya.com.uy">punta@viajesya.com.uy</a>
+                        </p>
+                    </article>
+                </section>
+            </footer>
+        </div>
+    </body>
+</html>

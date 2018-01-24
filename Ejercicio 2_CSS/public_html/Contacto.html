@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="contenedor">
+            <header>
+                <a href="Bienvenida.html">
+                    <img id="logo" alt="logo" src="img/logo.png">
+                </a>
+                <div id="login">
+                    <form id="formLogin">
+                        <div>
+                          <label for="nomreUsuario" id="labelUser">Usuario</label>
+                          <input type="text" id="nomreUsuario" required>
+                        </div>
+                        <div>
+                          <label for="contraseña">Contraseña</label>
+                          <input type="password" id="contraseña" required>
+                        <button type="submit" id="btnIngresar">Ingresar</button>
+                        </div>
+                    </form>  
+                </div>
+            </header>
+                <div style="clear: both"></div>
+            <nav id="navegacion">
+                 <ul>
+                     <li><a href="Bienvenida.html">Inicio</a></li>
+                     <li><a href="Destinos.html">Destinos</a></li>
+                     <li><a href="Paquetes.html">Paquetes</a></li>
+                     <li><a href="Reservas.html">Reservas</a></li>
+                     <li><a href="Contacto.html" class="activo">Contacto</a></li>
+                </ul> 
+                </nav> 
+            <section>
+                <div id="divContacto">
+                    <form>
+                        <h1>Contáctanos</h1>
+                        <label for="nombre">Nombre</label>
+                        <input  type="text" id="nombre" name="nombre" title="Escribe tu nombre" placeholder="Tu primer nombre" required>
+                        <label for="apellido1">Apellido</label>
+                        <input type="text" id="apellido1" name="apellido1" title="Escribe tu primer apellido" placeholder="Primer apellido" required >
+                        <label for="mail" lang="en">Mail</label>
+                        <input type="email" id="mail" name="mail" title="Escribe tu mail" placeholder="tu@email.com" required>
+                        <textarea name="comentarios" id="comentarios" cols="100" rows="10" title="Escribe tus comentarios"></textarea> 
+                        <input type="submit" name="enviar" id="enviar" value="Enviar">
+                        <input type="reset" name="reset" id="reset" value="Borrar">
+                    </form>
+                </div>
+            </section>
+            <div style="clear: both"></div>
+        <footer id="footer">
+            <div id="footerLinks">
+                <ul>
+                    <li><a href="#" target="_self" title="Empresa">Empresa</a></li>
+                    <li><a href="#" target="_self" title="Sucursales">Sucursales</a></li>
+                    <li><a href="#" target="_self" title="Corporativo">Corporativo</a></li>
+                    <li><a href="#" target="_self" title="Contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div id="footerPago">
+                <ul>
+                    <li><h4>Formas de Pago</h4></li>
+                    <li>Tarjetas de Crédito</li>
+                    <li>Depóosito Bancario</li>
+                    <li>Red Pagos</li>
+                    <li>Abitab</li>
+                </ul>
+            </div>
+            <div id="footerOficinas">
+                <h4>Oficinas</h4>
+                <div>
+                    <p>
+                        MONTEVIDEO - CASA CENTRAL<br>
+                        Colonia 949<br>
+                        Teléfonos: + 598 2902 6868 / 2902 1844<br>
+                        <a href="mailto:ccentral@viajesya.com.uy">ccentral@viajesya.com.uy</a>
+                    </p>
+                    <p>
+                        PUNTA DEL ESTE<br>
+                        Blvd. Artigas Parada 6 esq. Pascual Gattas<br>
+                        Teléfono: +598 4248 4680 <br>
+                        <a href="mailto:punta@viajesya.com.uy">punta@viajesya.com.uy</a>
+                    </p>
+                </div>
+            </div>             
+        </footer>
+        </div>
+    </body>
+</html>

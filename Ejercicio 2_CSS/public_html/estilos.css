@@ -1,0 +1,346 @@
+/*--------------------INICIO diagramacion general----------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #C5D8D8;
+    font-family: sans-serif;
+        
+}
+#contenedor {
+	width: 1070px;
+        margin: 0 auto;
+	background-color: #FFF;
+        overflow: auto;
+}
+/*--------------------FIN diagramacion general----------------------*/
+
+/*--------------------INICIO diagramacion header----------------------*/
+header{
+    width: 1070px;
+    height: 130px;
+}
+#logo{
+    height: 130px;
+    float: left;
+}
+#login{
+    height: 130px;
+    width: 725px;
+    float: left;
+}
+#formLogin{
+    height: 130px;
+    margin-top: 10px;
+}
+#login label, #btnIngresar, #login input{
+    margin-left: 550px;
+    display: inline-block;  
+}
+#labelUsuario{
+    margin-top: 10px
+}
+#btnIngresar{
+    margin-top: 5px;
+}
+/*--------------------FIN diagramacion header----------------------*/
+
+/*--------------------INICIO diagramacion nav----------------------*/
+#navegacion{
+    width: 1070px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+nav#navegacion ul li a{
+    display: block;
+    height: 25px;
+    width: 214px;
+    background-color: #0f3a57;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    text-decoration: none;  
+    float: left;
+}
+nav#navegacion ul li a.activo{
+    opacity: 0.5; 
+}
+nav#navegacion ul li a:hover{
+    opacity: 0.5; 
+}
+nav ul {
+	list-style-type: none;
+}
+/*--------------------FIN diagramacion nav----------------------*/
+
+/*-------------INICIO diagramacion cuerpo BIENVENIDA---------------*/
+section {
+    margin: 10px 10px 10px 10px;
+    width: 1050px;
+    float: left;
+}
+article {
+    width: 520px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    float: left;
+}
+section article img{
+    display: block;
+    width: 500px;
+    height: 320px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto
+}
+#h1Ofertas{
+    color: #db4760;
+    font-size: 30px;
+}
+#h2Roma, #h2Barcelona, #h2Rio, #h2Caribe{
+    margin-bottom: 10px;
+    color: #0f3a57;
+}
+section article figcaption{
+    margin-bottom: 5px;
+    text-align: center;
+}
+#artRoma a{
+    text-decoration: none;
+}
+#artCaribe, #artBarcelona{
+    margin-left: 10px;
+}
+/*--------------------FIN diagramacion cuerpo BIENVENIDA----------------------*/
+
+/*---------------INICIO diagramacion cuerpo PAQUETES-----------------*/
+#sectPaquetes article{
+    float: left;
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+#sectPaquetes article figure img{
+    display: block;
+    border-radius: 5px;
+    height: 320px; 
+    width: 500px;
+    margin: auto;
+}
+#sectPaquetes article p{
+    margin-top: 10px;
+}
+#sectPaquetes article h2{
+    color: #0f3a57;
+    margin-bottom: 10px;
+}
+#sectPaquetes h1{
+    color: #db4760;
+}
+/*---------------FIN diagramacion cuerpo PAQUETES-----------------*/
+
+/*---------------INICIO diagramacion cuerpo DESTINOS-----------------*/
+#sectDestinos article{
+    height: 270px;
+    width: 1000px;
+    float: left; 
+}
+#sectDestinos article img{
+    display: block;
+    float: left;
+    width: 380px;
+    height: auto;
+}
+#sectDestinos h1 {
+    color: #db4760;
+    margin-bottom: 10px;
+}
+#sectDestinos article h2{
+    width: 600px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: #0f3a57;
+}
+#sectDestinos article p{
+    width: 600px;
+    margin-left: 20px;
+    float:left; 
+}
+/*---------------FIN diagramacion cuerpo DESTINOS-----------------*/
+
+/*---------------INICIO diagramacion cuerpo CONTACTO-----------------*/
+#nombre, #apellido1, #mail  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#divContacto{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}    
+#comentarios{
+    width: 100%;
+    resize: none;
+}
+#enviar, #reset{
+    width: 100%;
+    background-color: #a4a4a4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}   
+#enviar{
+    margin-top: 15px;
+}
+#divContacto label{
+    margin-bottom: 15px;
+}
+#divContacto h1 {
+    margin-bottom: 10px;
+    color: #0f3a57;
+}
+#enviar:hover, #reset:hover {
+    background-color: #ccc;
+}
+/*---------------FIN diagramacion cuerpo CONTACTO-----------------*/
+
+/*---------------INICIO diagramacion cuerpo RESERVAS -----------------*/
+#divReservas{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#nombre2, #apellido2, #telefono, #telefono_emergencia{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#telefono, #telefono_emergencia{/*Para remover flechitas del campo telefono*/
+    -moz-appearance: textfield;
+}
+#selDestino {
+    width: 30%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+#divReservas h3{
+    margin: 10px 0px;
+    color: #0f3a57; 
+}
+#divReservas h2{
+    margin: 10px 0px;
+    color: #0f3a57;
+}
+#divReservas h1{
+    color: #0f3a57;
+}
+#divReservas #formulario #pasaje{
+    padding: 5px;
+    margin-bottom: 15px;
+}
+#divReservas p{
+    margin-bottom: 10px;
+}
+/*---------------FIN diagramacion cuerpo RESERVAS-----------------*/
+
+/*----------INICIO diagramacion cuerpo VIAJAR A ROMA------------*/
+#h1Roma{
+    color: #0f3a57; 
+}
+#divTabla h2{
+    margin-bottom: 10px;
+}
+#divTabla th, td {
+    padding: 15px;
+    text-align: center;
+}
+#divTabla h1{
+    margin-bottom: 10px;
+}
+table{
+    width: 100%;
+    margin-bottom: 10px;
+    border-spacing: 0;
+}
+td:hover {
+    background-color: #ccffcc
+}
+#tdAgotado, #tdAgotado2{
+    background-color: #ffcccc;  
+}
+#divTabla th{
+    background-color: #C5D8D8; 
+}
+/*---------------FIN diagramacion cuerpo VIAJAR A ROMA-----------------*/
+
+/*--------------------INICIO diagramacion footer----------------------*/
+footer{
+    background-color: #0f3a57;
+    height: 240px;
+    width: 1070px;
+    margin-top: 10px;
+}
+#footerLinks, #footerPago, #footerOficinas{
+    width: 335px;
+    float: left;
+    padding: 25px 10px 0px 10px; 
+}
+li, h4{
+    color: white;
+    text-decoration: none;
+}
+#footer a{
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+}
+/*---------------------footerLinks--------------------------*/
+#footerLinks ul li{
+    font-size: 20px;
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+#footerLinks ul li a:hover{
+    text-decoration: underline;
+}
+#footerLinks ul {
+    display: block;
+    margin-left: 100px;
+}
+/*------------------------footerPago----------------------------*/
+#footerPago ul li{
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+#footerPago ul {
+    display: block;
+    margin-left: 40px;
+}
+/*-------------------footerOficinas------------------------------*/
+#footerOficinas{
+    color: white;
+}
+#footerOficinas h4{
+    margin-bottom: 5px;
+}
+#footerOficinas p{
+    margin-bottom: 15px;
+}
+/*--------------------FIN diagramacion footer----------------------*/
